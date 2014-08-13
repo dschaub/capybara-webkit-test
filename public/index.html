@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Tester Place</title>
+</head>
+<body>
+<div id="spot"></div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/lodash/dist/lodash.js"></script>
+<script>
+
+var template;
+
+$.ajax({
+    url: 'assets/file.html',
+    async: false,
+    success: function(result) {
+        template = $(result);
+    }
+});
+
+$('#spot').html(template.html());
+
+</script>
+</body>
+</html>
